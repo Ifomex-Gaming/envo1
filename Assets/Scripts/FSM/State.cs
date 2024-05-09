@@ -11,20 +11,23 @@ public class State
     protected Vector2 input;
  
     public InputAction moveAction;
-    public InputAction lookAction;
+   // public InputAction lookAction;
     public InputAction jumpAction;
-    public InputAction crouchAction;
-    public InputAction sprintAction;
+   // public InputAction crouchAction;
+    public InputAction attackAction;
+    public InputAction burstAction;
  
     public State(Character _character, StateMachine _stateMachine)
     {
         character = _character;
         stateMachine = _stateMachine;
  
-        moveAction = character.playerInput.actions["MoveForward"];
-        lookAction = character.playerInput.actions["MoveBackward"];
+        moveAction = character.playerInput.actions["Move"];
+       // lookAction = character.playerInput.actions["MoveBackward"];
         jumpAction = character.playerInput.actions["Jump"];
-        crouchAction = character.playerInput.actions["Crouch"];
+        attackAction = character.playerInput.actions["Attack"];
+        burstAction = character.playerInput.actions["Burst"];
+       // crouchAction = character.playerInput.actions["Crouch"];
        // sprintAction = character.playerInput.actions["Sprint"];
  
     }
